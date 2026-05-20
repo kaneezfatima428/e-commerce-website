@@ -8,13 +8,13 @@ var productsData = [
     { id: 6, name: "Minimalist Gold Watch", category: "Accessories", price: 199.00, image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=500" },
     { id: 7, name: "Oversized Wool Blazer", category: "Luxury Wear", price: 175.00, image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=500" },
     { id: 8, name: "Premium Velvet Heels", category: "Footwear", price: 135.00, image: "https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?q=80&w=500" },
-    { id: 9, name: "Silk Aesthetic Scarf", category: "Accessories", price: 45.00, image: "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=500" },
+    { id: 9, name: "Silk Aesthetic Scarf", category: "Accessories", price: 45.00, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTXffcGD0wr1lkIhvaNx-Qkf1GhLe8XDpkrA&s" },
     { id: 10, name: "Casual Denim Jacket", category: "Apparel", price: 85.00, image: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?q=80&w=500" },
     { id: 11, name: "Noir Luxury Perfume", category: "Fragrance", price: 110.00, image: "https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=500" },
     { id: 12, name: "Sleek Black Sunglasses", category: "Accessories", price: 65.00, image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=500" },
     { id: 13, name: "Knitted Winter Sweater", category: "Apparel", price: 90.00, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLQ7wdca4L-ICoe1GQFBrNPuEAWRBmXh64tA&s" },
     { id: 14, name: "Urban Chelsea Boots", category: "Footwear", price: 160.00, image: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?q=80&w=500" },
-    { id: 15, name: "Minimalist Tote Bag", category: "Accessories", price: 75.00, image: "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=500" },
+    { id: 15, name: "Minimalist Tote Bag", category: "Accessories", price: 75.00, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgL0Ir15AxzUA_iHgjZt6HHXwbe_jCAQfP3Q&s" },
     { id: 16, name: "Linen Summer Shirt", category: "Apparel", price: 55.00, image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=500" },
     { id: 17, name: "Gold Plated Necklace", category: "Accessories", price: 125.00, image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=500" },
     { id: 18, name: "Tailored Trousers", category: "Apparel", price: 95.00, image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=500" },
@@ -344,4 +344,43 @@ function handleOrderPlacement() {
         cartCountBadge.style.display = "none"; // Badge hidden again till next additions
         document.getElementById("checkoutForm").reset(); // Inputs data clean logic
     });
+}
+// 7. Checkout Se Pehle Cart Validation Engine
+function checkCartBeforeCheckout() {
+    // Agar cart bilkul khali hai (length zero hai)
+    if (myCart.length === 0) {
+        // Pehle Cart Modal ko band karenge jo khula hua hai
+        var cartModalEl = document.getElementById('cartModal');
+        var cartModalInstance = bootstrap.Modal.getInstance(cartModalEl);
+        if (cartModalInstance) {
+            cartModalInstance.hide();
+        }
+
+        // Mazedaar SweetAlert Error/Warning Popup dikhayenge
+        Swal.fire({
+            title: 'Your Bag is Empty!',
+            text: ' Please add at least one luxury item to your cart before proceeding to checkout.',
+            icon: 'warning',
+            iconColor: '#bc9c22', // Theme se match karta hua gold color
+            background: '#111111',
+            color: '#ffffff',
+            showConfirmButton: true,
+            confirmButtonText: 'Let\'s Shop',
+            confirmButtonColor: '#bc9c22',
+            customClass: {
+                popup: 'rounded-4 border border-secondary shadow-lg'
+            }
+        });
+    } 
+    // Agar cart me maal pada hua hai (items hain), to system agle modal pr le jaye
+    else {
+        // Cart modal ko band karo
+        var cartModalEl = document.getElementById('cartModal');
+        var cartModalInstance = bootstrap.Modal.getInstance(cartModalEl);
+        if (cartModalInstance) { cartModalInstance.hide(); }
+
+        // Aur automatic Checkout Form wale modal ko open kar do vanilla JS se
+        var checkoutModalEl = new bootstrap.Modal(document.getElementById('checkoutModal'));
+        checkoutModalEl.show();
+    }
 }
