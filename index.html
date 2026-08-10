@@ -1,147 +1,319 @@
-
-
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LUXE - Premium Dark E-Store</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-black text-white">
-
-    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-secondary sticky-top py-3">
-        <div class="container">
-            <a class="navbar-brand fw-bold fs-3 tracking-wider text-uppercase text-white" href="#">LUXE</a>
-            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i class="fa-solid fa-bars fs-4"></i>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav gap-3 text-uppercase small fw-semibold">
-                    <li class="nav-item"><a class="nav-link text-white-50" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white-50" href="#">Shop</a></li>
-                    <li class="nav-item"><a class="nav-link text-white-50" href="#">Collections</a></li>
-                </ul>
-            </div>
-            <div class="d-flex align-items-center gap-4 text-white">
-                <div class="position-relative" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#cartModal" onclick="updateCartModalUI()">
-                    <i class="fa-solid fa-bag-shopping fs-4"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark small" id="cart-count" style="font-size: 10px; display: none;">0</span>
-                </div>
-            </div>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-black text-white">
+    <nav
+      class="navbar navbar-expand-lg bg-dark border-bottom border-secondary sticky-top py-3"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand fw-bold fs-3 tracking-wider text-uppercase text-white"
+          href="#"
+          >LUXE</a
+        >
+        <button
+          class="navbar-toggler border-0 text-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="fa-solid fa-bars fs-4"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav gap-3 text-uppercase small fw-semibold">
+            <li class="nav-item">
+              <a class="nav-link text-white-50" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white-50" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white-50" href="#">Collections</a>
+            </li>
+          </ul>
         </div>
+        <div class="d-flex align-items-center gap-4 text-white">
+          <div
+            class="position-relative"
+            style="cursor: pointer"
+            data-bs-toggle="modal"
+            data-bs-target="#cartModal"
+            onclick="updateCartModalUI()"
+          >
+            <i class="fa-solid fa-bag-shopping fs-4"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark small"
+              id="cart-count"
+              style="font-size: 10px; display: none"
+              >0</span
+            >
+          </div>
+        </div>
+      </div>
     </nav>
     <header class="hero-section d-flex align-items-center text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 offset-md-1 text-center text-md-start">
-                    <span class="text-uppercase small d-block mb-2 tracking-widest text-warning fw-medium">New Collection 2026</span>
-                    <h1 class="display-3 fw-bold mb-3">Refine Your Style</h1>
-                    <p class="lead mb-4 text-white-50">Explore luxury apparel crafted with premium quality and aesthetic attention to detail.</p>
-                    <button class="btn btn-outline-light px-4 py-2 text-uppercase tracking-wider btn-sm rounded-0">Shop Collection</button>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 offset-md-1 text-center text-md-start">
+            <span
+              class="text-uppercase small d-block mb-2 tracking-widest text-warning fw-medium"
+              >New Collection 2026</span
+            >
+         <!-- <h1 class="display-3 fw-bold mb-3">Refine Your Style</h1> -->
+          <h1 class="display-3 fw-bold mb-3"></h1>
+            <p class="lead mb-4 text-white-50">
+              Explore luxury apparel crafted with premium quality and aesthetic
+              attention to detail.
+            </p>
+            <button
+              class="btn btn-outline-light px-4 py-2 text-uppercase tracking-wider btn-sm rounded-0"
+            >
+              Shop Collection
+            </button>
+          </div>
         </div>
+      </div>
     </header>
     <main class="container my-5">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-semibold position-relative d-inline-block pb-3 section-line text-white">Featured Products</h2>
-        </div>
+      <div class="text-center mb-5">
+        <h2
+          class="display-5 fw-semibold position-relative d-inline-block pb-3 section-line text-white"
+        >
+          Featured Products
+        </h2>
+      </div>
 
-        <div class="row mb-5">
-            <div class="col-12 text-center d-flex flex-wrap justify-content-center gap-2">
-                <button class="btn btn-outline-warning text-uppercase px-3 py-1.5 rounded-0 small tracking-wider active" onclick="filterProducts('All', this)">All</button>
-                <button class="btn btn-outline-warning text-uppercase px-3 py-1.5 rounded-0 small tracking-wider" onclick="filterProducts('Apparel', this)">Apparel</button>
-                <button class="btn btn-outline-warning text-uppercase px-3 py-1.5 rounded-0 small tracking-wider" onclick="filterProducts('Luxury Wear', this)">Luxury Wear</button>
-                <button class="btn btn-outline-warning text-uppercase px-3 py-1.5 rounded-0 small tracking-wider" onclick="filterProducts('Footwear', this)">Footwear</button>
-                <button class="btn btn-outline-warning text-uppercase px-3 py-1.5 rounded-0 small tracking-wider" onclick="filterProducts('Accessories', this)">Accessories</button>
-                <button class="btn btn-outline-warning text-uppercase px-3 py-1.5 rounded-0 small tracking-wider" onclick="filterProducts('Fragrance', this)">Fragrance</button>
-            </div>
+      <div class="row mb-5">
+        <div
+          class="col-12 text-center d-flex flex-wrap justify-content-center gap-2"
+        >
+          <button
+            class="btn btn-outline-warning text-uppercase px-3 py-1.5 rounded-0 small tracking-wider active"
+            onclick="filterProducts('All', this)"
+          >
+            All
+          </button>
+          <button
+            class="btn btn-outline-warning text-uppercase px-3 py-1.5 rounded-0 small tracking-wider"
+            onclick="filterProducts('Apparel', this)"
+          >
+            Apparel
+          </button>
+          <button
+            class="btn btn-outline-warning text-uppercase px-3 py-1.5 rounded-0 small tracking-wider"
+            onclick="filterProducts('Luxury Wear', this)"
+          >
+            Luxury Wear
+          </button>
+          <button
+            class="btn btn-outline-warning text-uppercase px-3 py-1.5 rounded-0 small tracking-wider"
+            onclick="filterProducts('Footwear', this)"
+          >
+            Footwear
+          </button>
+          <button
+            class="btn btn-outline-warning text-uppercase px-3 py-1.5 rounded-0 small tracking-wider"
+            onclick="filterProducts('Accessories', this)"
+          >
+            Accessories
+          </button>
+          <button
+            class="btn btn-outline-warning text-uppercase px-3 py-1.5 rounded-0 small tracking-wider"
+            onclick="filterProducts('Fragrance', this)"
+          >
+            Fragrance
+          </button>
         </div>
+      </div>
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="products-container">
-            </div>
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4"
+        id="products-container"
+      ></div>
     </main>
 
-
-
     <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content bg-dark text-white rounded-4 border border-secondary shadow-lg">
-                <div class="modal-header border-secondary">
-                    <h5 class="modal-title fw-bold text-uppercase tracking-wider" style="font-family: 'Playfair Display', serif;">Your Luxury Cart</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-with="modal" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body py-3" id="cart-modal-body" style="max-height: 400px; overflow-y: auto;">
-                    </div>
-                <div class="modal-footer border-secondary d-flex justify-content-between flex-column align-items-stretch">
-                    <div class="d-flex justify-content-between mb-2 fw-semibold fs-5 px-1">
-                        <span>Total Payable:</span>
-                        <span style="color: #bc9c22;" id="cart-total-bill">$0.00</span>
-                    </div>
-<button class="btn btn-warning w-100 py-2.5 text-uppercase fw-semibold tracking-wider rounded-0 text-dark" style="background-color: #bc9c22; border:none;" onclick="checkCartBeforeCheckout()">Proceed to Checkout</button>              </div>
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div
+          class="modal-content bg-dark text-white rounded-4 border border-secondary shadow-lg"
+        >
+          <div class="modal-header border-secondary">
+            <h5
+              class="modal-title fw-bold text-uppercase tracking-wider"
+              style="font-family: &quot;Playfair Display&quot;, serif"
+            >
+              Your Luxury Cart
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-with="modal"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div
+            class="modal-body py-3"
+            id="cart-modal-body"
+            style="max-height: 400px; overflow-y: auto"
+          ></div>
+          <div
+            class="modal-footer border-secondary d-flex justify-content-between flex-column align-items-stretch"
+          >
+            <div
+              class="d-flex justify-content-between mb-2 fw-semibold fs-5 px-1"
+            >
+              <span>Total Payable:</span>
+              <span style="color: #bc9c22" id="cart-total-bill">$0.00</span>
             </div>
+            <button
+              class="btn btn-warning w-100 py-2.5 text-uppercase fw-semibold tracking-wider rounded-0 text-dark"
+              style="background-color: #bc9c22; border: none"
+              onclick="checkCartBeforeCheckout()"
+            >
+              Proceed to Checkout
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-<div class="modal fade" id="checkoutModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content bg-dark text-white rounded-4 border border-secondary shadow-lg">
-                <div class="modal-header border-secondary">
-                    <h5 class="modal-title fw-bold text-uppercase tracking-wider" style="font-family: 'Playfair Display', serif; color: #bc9c22;">Shipping Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body py-4">
-                    <form id="checkoutForm" onsubmit="event.preventDefault(); handleOrderPlacement();">
-                        <div class="mb-3">
-                            <label class="form-label small text-white-50 text-uppercase tracking-wider">Full Name</label>
-                            <input type="text" class="form-content-input w-100 p-2.5 bg-black border border-secondary text-white rounded" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label small text-white-50 text-uppercase tracking-wider">Email Address</label>
-                            <input type="email" class="form-content-input w-100 p-2.5 bg-black border border-secondary text-white rounded" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label small text-white-50 text-uppercase tracking-wider">Shipping Address</label>
-                            <textarea class="form-content-input w-100 p-2.5 bg-black border border-secondary text-white rounded" rows="2" required></textarea>
-                        </div>
-                        <div class="mb-4">
-                            <label class="form-label small text-white-50 text-uppercase tracking-wider">Payment Method</label>
-                            <select class="form-content-input w-100 p-2.5 bg-black border border-secondary text-white rounded" required>
-                                <option value="cod">Cash on Delivery (COD)</option>
-                                <option value="card">Credit / Debit Card</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-warning w-100 py-2.5 text-uppercase fw-semibold tracking-wider rounded-0 text-dark" style="background-color: #bc9c22; border:none;">Place Order</button>
-                    </form>
-                </div>
-            </div>
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div
+          class="modal-content bg-dark text-white rounded-4 border border-secondary shadow-lg"
+        >
+          <div class="modal-header border-secondary">
+            <h5
+              class="modal-title fw-bold text-uppercase tracking-wider"
+              style="
+                font-family: &quot;Playfair Display&quot;, serif;
+                color: #bc9c22;
+              "
+            >
+              Shipping Details
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body py-4">
+            <form
+              id="checkoutForm"
+              onsubmit="
+                event.preventDefault();
+                handleOrderPlacement();
+              "
+            >
+              <div class="mb-3">
+                <label
+                  class="form-label small text-white-50 text-uppercase tracking-wider"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  class="form-content-input w-100 p-2.5 bg-black border border-secondary text-white rounded"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label
+                  class="form-label small text-white-50 text-uppercase tracking-wider"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  class="form-content-input w-100 p-2.5 bg-black border border-secondary text-white rounded"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label
+                  class="form-label small text-white-50 text-uppercase tracking-wider"
+                  >Shipping Address</label
+                >
+                <textarea
+                  class="form-content-input w-100 p-2.5 bg-black border border-secondary text-white rounded"
+                  rows="2"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-4">
+                <label
+                  class="form-label small text-white-50 text-uppercase tracking-wider"
+                  >Payment Method</label
+                >
+                <select
+                  class="form-content-input w-100 p-2.5 bg-black border border-secondary text-white rounded"
+                  required
+                >
+                  <option value="cod">Cash on Delivery (COD)</option>
+                  <option value="card">Credit / Debit Card</option>
+                </select>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-warning w-100 py-2.5 text-uppercase fw-semibold tracking-wider rounded-0 text-dark"
+                style="background-color: #bc9c22; border: none"
+              >
+                Place Order
+              </button>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-    
+
     <footer class="bg-dark text-white-50 py-5 mt-5 border-top border-secondary">
-        <div class="container text-center text-md-start">
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <h5 class="text-white fw-bold tracking-widest mb-3">LUXE STORE</h5>
-                    <p class="small pr-md-5">Your ultimate destination for curated fashion and premium designs. We provide luxury items with uncompromising quality.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <h5 class="text-white fw-bold mb-3">Contact Info</h5>
-                    <p class="small mb-1"><i class="fa-regular fa-envelope me-2"></i> info@luxestore.com</p>
-                    <p class="small"><i class="fa-solid fa-phone me-2"></i> +123 456 7890</p>
-                </div>
-            </div>
-            <div class="border-top border-secondary mt-4 pt-3 text-center small">
-                <p class="mb-0">&copy; 2026 LUXE Store. All Rights Reserved.</p>
-            </div>
+      <div class="container text-center text-md-start">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h5 class="text-white fw-bold tracking-widest mb-3">LUXE STORE</h5>
+            <p class="small pr-md-5">
+              Your ultimate destination for curated fashion and premium designs.
+              We provide luxury items with uncompromising quality.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <h5 class="text-white fw-bold mb-3">Contact Info</h5>
+            <p class="small mb-1">
+              <i class="fa-regular fa-envelope me-2"></i> info@luxestore.com
+            </p>
+            <p class="small">
+              <i class="fa-solid fa-phone me-2"></i> +123 456 7890
+            </p>
+          </div>
         </div>
+        <div class="border-top border-secondary mt-4 pt-3 text-center small">
+          <p class="mb-0">&copy; 2026 LUXE Store. All Rights Reserved.</p>
+        </div>
+      </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
-</body>
+    <script src="animation.js"></script>
+  </body>
 </html>
